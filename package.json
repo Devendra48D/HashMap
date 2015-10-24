@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ranjay Salmon",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "multer": "^1.1.0",
+    "q": "^1.4.1",
+    "request": "^2.65.0",
+    "twitter": "^1.2.5"
+  }
 }
