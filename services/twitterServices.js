@@ -22,10 +22,11 @@ exports.searchTweets = function (req, res) {
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     */
+    var search = "#"+ req.params.hashTag;
 
     console.log("endpoint hit");
     client.get("search/tweets", {
-        q: "#blacklivesmatter"
+        q: search
     }, function(error, tweets, response){
 
         if(error){
@@ -62,35 +63,4 @@ exports.twitterLogin = function(request, response){
 
 
 
-function makeRequest(params){
 
-
-
-    var deferred = Q.defer();
-
-    var url = utils.baseUrl + params.url;
-
-    request({
-        url: url, //URL to hit
-        method: params.method,
-        body: params.body,
-        json: true,
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Parse-Application-Id': utils.parseApplicationId,
-            'X-Parse-REST-API-Key': utils.parseRestApiKey,
-            'X-Parse-Revocable-Session': 1
-        }
-    }, function(error, response, body){
-        if(!error && response.statusCode == 200) {
-            //console.log(response.statusCode, body);
-            deferred.resolve({statusCode: response.statusCode, body: body});
-
-        } else {
-            console.log(error);
-            deferred.reject({statusCode: response.statusCode, body: body});
-        }
-    });
-
-    return deferred.promise;
-}
