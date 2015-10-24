@@ -26,7 +26,8 @@ exports.searchTweets = function (req, res) {
 
     console.log("endpoint hit");
     client.get("search/tweets", {
-        q: search
+        q: search,
+        include_entities: true
     }, function(error, tweets, response){
 
         if(error){
