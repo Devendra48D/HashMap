@@ -1,0 +1,15 @@
+#map_canvas path {
+    stroke-width: 1;
+    stroke : #000000;
+}
+#text {
+    font-weight: normal;
+}
+
+p.thick {
+    font-weight: bold;
+}
+
+p.thicker {
+    font-weight: 900;
+}
