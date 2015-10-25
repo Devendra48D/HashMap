@@ -1,0 +1,16 @@
+<html>
+    
+    <head>
+        <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+        <script type='text/javascript'>
+            
+        </script>
+    </head>
+    
+    <body>
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <p>A Google Geo Chart allowing the populations of the states and the number of tweets in each state of the </p>
+        <h1>United States of America</h1>
+    </body>
+
+</html>
