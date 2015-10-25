@@ -19,7 +19,7 @@ var router = express.Router();
 router.route('/login').get(twitterServices.twitterLogin);
 
 
-
+router.route("/tweets/:hashTag").get(twitterServices.searchTweets);
 
 // prefix all routes with ap1/v1
 app.use('/api/v1', router);
